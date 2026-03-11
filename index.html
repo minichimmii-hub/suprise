@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>⚠️ WARNING: Akun Terinfeksi!</title>
+<style>
+body {
+  font-family: Arial;
+  background-color: black;
+  color: red;
+  text-align: center;
+  margin-top: 100px;
+}
+h1 {
+  font-size: 48px;
+  animation: blink 1s infinite;
+}
+p { font-size: 20px; margin: 20px; }
+@keyframes blink {
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+</style>
+</head>
+<body>
+
+<h1>⚠️ AKUN TERKENA MALWARE! ⚠️</h1>
+<p>Segera klik tombol di bawah untuk menyelamatkan akunmu!</p>
+
+<button onclick="prankEnd()">Selamatkan Akun</button>
+
+<!-- Suara alarm/error dari internet -->
+<audio id="alertSound" autoplay loop>
+  <source src="https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg" type="audio/ogg">
+  <source src="https://actions.google.com/sounds/v1/alarms/alarm_clock.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function prankEnd() {
+  const sound = document.getElementById('alertSound');
+  sound.pause();
+  document.body.innerHTML = `
+    <h1>AKUN AMAN 😎</h1>
+    <p>Tenang, ini hanya prank. Tidak ada data yang dicuri,BTW ini yang buat hfdz keren ga!</p>
+  `;
+}
+</script>
+
+</body>
+</html>
